@@ -1,5 +1,5 @@
 import slack from './src/notifiers/slack'
-//import kvStore from './src/kv-store'
+import formatData from './src/utils/format-data'
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
@@ -11,10 +11,11 @@ addEventListener('fetch', event => {
  */
 async function handleRequest(request) {
   try {
-    await slack(request)
+    const message = await formatData(request.body)
+    await slack(message)
   } catch (error) {
     return new Response(error.message, { status: 500 })
   }
 
-  return new Response('Hello1!', { status: 200 })
+  return new Response('ok', { status: 200 })
 }

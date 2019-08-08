@@ -1,6 +1,6 @@
-export default async request => {
+export default async message => {
   const endpoint = await CONFIG.get('cbrz.ca', 'json').path
-  let content = `{"text":"${body}"}`
+  let content = `{"text":"${message}"}`
   let headers = {
     'Content-Type': 'application/json',
   }
@@ -9,6 +9,5 @@ export default async request => {
     headers: headers,
     body: content,
   }
-  const response = await fetch(endpoint, init)
-  return response
+  return await fetch(endpoint, init)
 }
