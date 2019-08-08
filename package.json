@@ -2,7 +2,7 @@
   "name": "static-form-worker",
   "version": "0.9.0",
   "description": "A template for kick starting a Cloudflare Workers project",
-  "main": "worker.js",
+  "main": "index.js",
   "scripts": {
 	"test": "nyc --reporter=html --reporter=text mocha --recursive",
 	"format": "eslint --fix ./worker.js ./src"
