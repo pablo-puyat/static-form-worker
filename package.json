@@ -1,0 +1,23 @@
+{
+  "name": "static-form-worker",
+  "version": "0.9.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
+  "main": "worker.js",
+  "scripts": {
+	"test": "nyc --reporter=html --reporter=text mocha --recursive",
+	"format": "eslint --fix ./worker.js ./src"
+  },
+  "author": "Pablo Puyot <pablo@cbrz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "proxyquire": "^2.1.1"
+  }
+}

@@ -1,0 +1,11 @@
+name = ""
+type = "webpack"
+zone_id = ""
+private = false
+account_id = ""
+route = ""
+
+[[kv-namespaces]]
+binding = ""
+id = ""
+
