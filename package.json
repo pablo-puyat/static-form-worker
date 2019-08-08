@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha --recursive",
-    "format": "eslint --fix ./worker.js ./src"
+    "format": "eslint --fix ./index.js ./src"
   },
   "author": "Pablo Puyot <pablo@cbrz.com>",
   "license": "MIT",
