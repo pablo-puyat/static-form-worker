@@ -4,8 +4,8 @@
   "description": "A template for kick starting a Cloudflare Workers project",
   "main": "index.js",
   "scripts": {
-	"test": "nyc --reporter=html --reporter=text mocha --recursive",
-	"format": "eslint --fix ./worker.js ./src"
+    "test": "nyc --reporter=html --reporter=text mocha --recursive",
+    "format": "eslint --fix ./worker.js ./src"
   },
   "author": "Pablo Puyot <pablo@cbrz.com>",
   "license": "MIT",
@@ -16,6 +16,7 @@
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "esm": "^3.2.25",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "proxyquire": "^2.1.1"

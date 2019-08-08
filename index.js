@@ -1,4 +1,4 @@
-import slack from './src/slack'
+import slack from './src/notifiers/slack'
 //import kvStore from './src/kv-store'
 
 addEventListener('fetch', event => {
