@@ -9,5 +9,6 @@ export default async message => {
     headers: headers,
     body: content,
   }
-  return await fetch(endpoint, init)
+//  return await fetch(endpoint, init)
+  return endpoint + ' ' + content
 }

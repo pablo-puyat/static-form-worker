@@ -4,7 +4,7 @@
   "description": "A template for kick starting a Cloudflare Workers project",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha --recursive",
+    "test": "nyc --reporter=text mocha --recursive -r esm",
     "format": "eslint --fix ./index.js ./src"
   },
   "author": "Pablo Puyot <pablo@cbrz.com>",
