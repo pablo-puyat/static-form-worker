@@ -1,6 +1,6 @@
 export default async dataObject => {
   if (dataObject === null || typeof dataObject !== 'object') {
-	  throw new Error('Must be an object')
+    throw new Error('Must be an object')
   }
   let formattedData = ''
   for (let property in dataObject) {
@@ -8,4 +8,3 @@ export default async dataObject => {
   }
   return formattedData
 }
-

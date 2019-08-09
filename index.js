@@ -11,13 +11,14 @@ addEventListener('fetch', event => {
  */
 async function handleRequest(request) {
   try {
-	let object = {}
-	const formSubmission = await request.formData()
-	const blah = await formSubmission.keys()
-	formSubmission.foreach((value, key) => { object[key] = value})
-    //const message = await formatData(postData)
-    //const blah = await slack(message)
-    return new Response(JSON.stringify(formSubmission), { status: 200 })
+    const formSubmission = await request.formData()
+    let formSubmissionObject = {}
+    for (const [key, value] of formSubmission.entries()) {
+      console.log(formSubmissionObject[key] = value)
+    }
+    const message = await formatData(formSubmissionObject)
+    await slack(message)
+    return new Response(message, { status: 200 })
   } catch (error) {
     return new Response(error.message, { status: 500 })
   }
