@@ -13,12 +13,9 @@ async function handleRequest(request) {
   try {
     const formSubmission = await request.formData()
     let formSubmissionObject = {}
-    for (const [key, value] of formSubmission.entries()) {
-      console.log(formSubmissionObject[key] = value)
-    }
     const message = await formatData(formSubmissionObject)
     await slack(message)
-    return new Response(message, { status: 200 })
+    return new Response('ok', { status: 200 })
   } catch (error) {
     return new Response(error.message, { status: 500 })
   }
